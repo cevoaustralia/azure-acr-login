@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+args=()
+
+args+=("--name" "${BUILDKITE_PLUGIN_AZURE_ACR_LOGIN_NAME}")
+
+az acr login "${args[@]}"

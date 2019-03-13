@@ -1,0 +1,12 @@
+---
+name: Azure ACR Login
+description: Login to Azure Container Registry (ACR) using `az acr login`
+author: https://github.com/cevoaustralia
+requirements:
+  - az
+configuration:
+  properties:
+    name:
+      type: string
+  required:
+    - name
