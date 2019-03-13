@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+  lint:
+    image: buildkite/plugin-linter
+    command: ['--id', 'cevoaustralia/azure-acr-login']
+    volumes:
+      - ".:/plugin"
+
+  tests:
+    image: buildkite/plugin-tester
+    volumes:
+      - ".:/plugin"

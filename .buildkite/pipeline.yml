@@ -1,0 +1,16 @@
+---
+steps:
+  - label: ":shell: Shellcheck"
+    plugins:
+      shellcheck#v1.1.2:
+        files: hooks/**
+
+  - label: ":sparkles:"
+    plugins:
+      plugin-linter#v2.0.0:
+        id: cevoaustralia/azure-acr-login
+
+  - label: ":docker: :hammer:"
+    plugins:
+      docker-compose#v3.0.0:
+        run: tests
